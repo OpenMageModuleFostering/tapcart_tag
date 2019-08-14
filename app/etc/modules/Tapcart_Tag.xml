@@ -1,0 +1,8 @@
+<config>
+  <modules>
+    <Tapcart_Tag>
+      <active>true</active>
+      <codePool>community</codePool>
+    </Tapcart_Tag>
+  </modules>
+</config>

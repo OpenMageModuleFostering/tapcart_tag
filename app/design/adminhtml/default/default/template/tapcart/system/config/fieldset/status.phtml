@@ -1,0 +1,62 @@
+<div class="box">
+
+	<img src="<?php echo $this->getSkinUrl('images/tapcart/logo-tapcart.png'); ?>" style="float:left;margin: 0 30px 0 0;"/>
+	
+	<?php if ($this->credentialsKnown()) : ?>
+
+		<?php if ($this->credentialsValid()) : ?>
+		<p><span style="color:green;font-weight:bold;">De gegevens zijn correct ingevoerd.</span><br />
+		<br />
+		Ga naar <a href="<?php echo $this->getUrl('admin-tapcart-tag/adminhtml_tag/index'); ?>">NFC Tags</a> om tags te koppelen aan uw webshop</p>
+		
+		<div style="clear:both; padding-top:20px;">
+		<?php $account = $this->getAccount();?>
+		<div style="float:left;width:48%;background-color:white;padding:5px;min-height:90px;">
+			<p style="margin:0;">
+				<strong>Deze accountgegevens zijn bij ons bekekend:</strong><br />
+				<?php if ($account !== null) : ?>
+				<?php echo $this->htmlEscape($account->name); ?><br />
+				<?php echo $this->htmlEscape($account->location->street_name); ?> <?php echo $this->htmlEscape($account->location->house_number); ?><?php echo $this->htmlEscape($account->location->house_number_addition); ?><br />
+				<?php echo $this->htmlEscape($account->location->postal_code); ?> <?php echo $this->htmlEscape($account->location->town); ?><br />
+				<?php echo $this->htmlEscape($account->location->country); ?><br />
+				<?php else : ?>
+				<span style="color:red">Onbekende fout bij het ophalen van account gegevens</span>
+				<?php endif; ?>
+			</p>
+		</div>
+		
+		<?php $quota = $this->getQuota();?>
+		<div style="float:right;width:48%;background-color:white;padding:5px;min-height:90px;">
+			<p style="margin:0;">
+				<strong>Dit zijn uw verbruikgegevens van de huidige store:</strong><br />
+				<?php if ($quota !== null) : ?>
+				Totaal aantal tags: <?php echo $this->htmlEscape($quota->tags); ?><br />
+				Aantal tags beschikbaar: <?php echo $this->htmlEscape($quota->free_tags); ?><br />
+				Aantal tags gebruikt: <?php echo $this->htmlEscape($quota->used_tags); ?><br />
+				<?php else : ?>
+				<span style="color:red">Onbekende fout bij het ophalen van verbruikgegevens gegevens</span>
+				<?php endif; ?>
+			</p>
+		</div>
+		
+		<br style="clear:both" />
+		
+		</div>
+		
+		<div style="margin-top:10px;">
+		<p>Voor documentatie en ondersteuning zie <a href="http://www.tapcart.nl" target="_blank">Tapcart.nl</a></p>
+		</div>
+		
+		<?php else : ?>
+		<p><span style="color:red;font-weight:bold;">De ingevoerde gegevens kloppen niet.</span><br />
+		<br />
+		Controleer uw gegevens en probeer het opnieuw.</p>
+		<?php endif; ?>
+		
+	<?php else : ?>
+	<p><span style="color:red;font-weight:bold;">De gegevens zijn niet volledig ingevuld.</span><br />
+	<br />
+	Ga naar <a href="http://www.tapcart.nl" target="_blank">Tapcart.nl</a> om u te registreren.</p>
+	<?php endif; ?>
+	<div style="clear:both;width:1px;height:1px;font-size:1px;overflow:hidden;">&nbsp;</div>
+</div>
