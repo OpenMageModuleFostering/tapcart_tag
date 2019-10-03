@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 Vindt u het ook zo vervelend als klanten in uw winkel komen om te kijken en proberen, maar vervolgens online gaan kopen? Met TapCart kunnen klanten direct online productinformatie inzien én online bestellen, in uw eigen webshop.
