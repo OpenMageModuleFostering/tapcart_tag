@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/tapcart_tag",
+    "name": "OpenMageModuleFostering\/tapcart_tag",
     "type": "magento-module",
     "license": "MIT-License",
     "homepage": "",
-    "description": "Vindt u het ook zo vervelend als klanten in uw winkel komen om te kijken en proberen, maar vervolgens online gaan kopen? Met TapCart kunnen klanten direct online productinformatie inzien én online bestellen, in uw eigen webshop.",
+    "description": "Vindt u het ook zo vervelend als klanten in uw winkel komen om te kijken en proberen, maar vervolgens online gaan kopen? Met TapCart kunnen klanten direct online productinformatie inzien \u00e9n online bestellen, in uw eigen webshop.",
     "authors": [
-    {
-        "name": "WebdesignTilburg",
-        "email": "j.vangijzel@webdesigntilburg.nl"
-    }
-],
+        {
+            "name": "WebdesignTilburg",
+            "email": "j.vangijzel@webdesigntilburg.nl"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
